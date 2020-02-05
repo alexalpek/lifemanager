@@ -1,5 +1,7 @@
 import React from "react";
 import MainPageButton from "./MainPageButton";
+import {Link} from "react-router-dom";
+import MainPage from "./MainPage";
 
 export default function ButtonContainer() {
 
@@ -9,8 +11,12 @@ export default function ButtonContainer() {
 
     return(
         <div style={style}>
-            <MainPageButton text="Login"/>
-            <MainPageButton text="Register"/>
+            <Link to="/login">
+                <MainPageButton text="Login"/>
+            </Link>
+            <Link to="/register">
+                <MainPageButton text="Register"/>
+            </Link>
         </div>
     )
 }
